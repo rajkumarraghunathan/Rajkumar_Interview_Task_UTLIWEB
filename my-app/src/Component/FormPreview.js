@@ -3,7 +3,7 @@ import { FaRegPaperPlane, FaUndo } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const FormPreview = ({ savedForm, setSavedForm }) => {
-    // Initialize the form state before any conditional rendering
+
     const [formResponses, setFormResponses] = useState([]);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const FormPreview = ({ savedForm, setSavedForm }) => {
         }
     }, [savedForm]);
 
-    // If no form is saved, display a message early
+
     if (!savedForm) {
         return (
             <div className="container mt-5">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaPlus, FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const DynamicForm = ({ setSavedForm }) => {  // Receive setSavedForm prop
+const DynamicForm = ({ setSavedForm }) => {
     const [questions, setQuestions] = useState([
         { questionId: 1, type: 'MCQ', questionText: '', options: ['', ''], preference: 'radio' }
     ]);
@@ -73,7 +73,7 @@ const DynamicForm = ({ setSavedForm }) => {  // Receive setSavedForm prop
                     options: q.type === 'MCQ' ? q.options.map((text, i) => ({ optionId: i + 1, optionText: text })) : undefined
                 }))
             };
-            setSavedForm(formStructure);  // Save form data to App.js state
+            setSavedForm(formStructure);
             alert('Form saved successfully!');
         } else {
             alert('Please fill at least 2 questions properly.');
